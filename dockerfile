@@ -1,7 +1,7 @@
 FROM golang:1.18-alpine
 WORKDIR /mywebsite
 COPY go.mod ./
-RUN go mod download
+
 COPY . .
 # Build the Go app
 RUN go build -o main .
